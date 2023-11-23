@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Cards</title>
+    <link rel="stylesheet" href="./assets/css/priceCardUpwork.css">
+</head>
+<body>
+
+ 
+
+ 
+
+    <div class="price_table-container-2">
+        <h3>Upwork Price Table Clone</h3>
+            <div class="service-box-upwork">
+                <div class="box-header">
+                    <h3>Select service tier</h3>
+                    <h5>Compare tiers</h5>
+                </div>
+                <div class="choose-package">
+                    <label for="starter_package" class="starter package">
+                        <input name="selected-package" type="radio" id="starter_package" class="starter-package radio-btn">
+                        <span>Starter</span>
+                        <span class="package_price">$90</span>
+                    </label>
+                    <label class="standard package" for="standard_package">
+                        <input name="selected-package" type="radio" id="standard_package" class="standard-package radio-btn">
+                        <span>Standard</span>
+                        <span class="package_price">$140</span>
+                    </label>
+                    <label class="advanced package" for="advanced_package">
+                        <input name="selected-package" type="radio" id="advanced_package" class="advanced-package radio-btn">
+                        <span>Advanced</span>
+                        <span class="package_price">$180</span>
+                    </label>
+                </div>
+                <div class="price_card-contents">
+                    <div class="content-data">
+                        <p>Delivery Time</p>
+                        <h5>3 days</h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Number of Products</p>
+                        <h5 id="number_of-products">1</h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Number of Photos Per Product</p>
+                        <h5>7</h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Number of Revisions</p>
+                        <h5>Unlimited</h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Retouching</p>
+                        <h5><ion-icon name="checkmark-outline"></ion-icon></h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Background Removal</p>
+                        <h5><ion-icon name="checkmark-outline"></ion-icon></h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Lifestyle Staging</p>
+                        <h5><ion-icon name="checkmark-outline"></ion-icon></h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Infographic</p>
+                        <h5><ion-icon name="checkmark-outline"></ion-icon></h5>
+                    </div>
+                    <div class="content-data">
+                        <p>Product Prep</p>
+                        <h5><ion-icon name="checkmark-outline"></ion-icon></h5>
+                    </div>
+                </div>
+                <div class="delivery_time-box">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <div class="delivery-time">
+                        <p>3 days delivery<span> -- Aug 28, 2023</span></p>
+                        <span>
+                            Revisions may occur after this date.
+                        </span>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button class="cta-btn-1" id="cta_btn-1">Continue ($90)</button>
+                    <button class="cta-btn-2">Message Erçin</button>
+                </div>
+            </div>
+    </div>
+
+
+       
+</main>
+      
+       
+
+
+  
+
+
+
+
+
+
+
+
+<!--mixitup-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>        
+
+<!--IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    function scrollHeader() {
+    const header = document.querySelector("header");
+    this.scrollY >= 20 ? header.classList.add("active") : header.classList.remove("active");
+}
+
+
+
+
+
+// Upwork price table
+
+const starterPackage = document.querySelector("#starter_package");
+const standardPackage = document.querySelector("#standard_package");
+const advancedPackage = document.querySelector("#advanced_package");
+const numberOfProducts = document.querySelector("#number_of-products");
+const button = document.querySelector("#cta_btn-1");
+
+starterPackage.addEventListener("click", () => {
+    numberOfProducts.innerText ="1";
+    button.innerText = "Continue($90)";
+})
+standardPackage.addEventListener("click", () => {
+    numberOfProducts.innerText ="2"
+    button.innerText = "Continue($140)";
+})
+advancedPackage.addEventListener("click", () => {
+    numberOfProducts.innerText ="3"
+    button.innerText = "Continue($180)";
+})
+
+
+</script>
+
+</body>
+</html>

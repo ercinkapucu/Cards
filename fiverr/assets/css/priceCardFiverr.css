@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&family=Prompt:wght@300;400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+::selection {
+    color: #fff;
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--subtitle-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--title-lg-color);
+    border-radius: 1rem;
+}
+
+:root {
+    --main-color: #131920;
+    --second-color: #232d39;
+    --title-lg-color: #4dbbff;
+    --title-n-color: #f8f8f8;
+    --subtitle-color: #8d8d8d; 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    height: 1000px;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.img-fluid {
+    max-width: 100%;
+    min-width: 60%;
+    height: auto;
+}
+
+.section {
+    padding: 9rem 0 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 5rem;
+}
+
+.btn {
+    background: var(--title-lg-color);
+    border: .1rem solid var(--title-lg-color);
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: border .4s;
+}
+
+.btn:hover {
+    background: transparent;
+    border: .1rem solid #f8f8f8;
+}
+
+.btn i {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.section_title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: .8;
+    color: #222;
+    position: relative;
+    margin-bottom: 10rem;
+    padding-bottom: 2rem;
+}
+
+.section_title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    height: 0.2rem;
+    background: var(--main-color);
+}
+
+.section_title::after {
+    content: "";
+    position: absolute;
+    bottom: -.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--main-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
+
+.to-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    right: 2%;
+    width: 4.5rem;
+    height: 5rem;
+    background: #279EFF;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    z-index: 1000;
+}
+
+.to-up ion-icon {
+    color: #fff;
+    font-size: 2.5rem;
+    transition: .4s;
+}
+
+.to-up ion-icon:hover {
+    transform: translateY(1rem);
+}
+
+@media screen and (max-width: 576px) {
+    .to-up {
+        width: 4rem;
+        height: 4.5rem;
+        bottom: 15%;
+        right: 5%;
+    }
+    .to-up ion-icon {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+/* ----------------------- *\ 
+    *** Price Cards Section ***
+/* ----------------------- */
+
+
+.price_table-container {
+   padding: 20rem 10rem 5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   overflow-x: hidden;
+}
+.price-heading {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: #444;
+  margin-bottom: 50px;
+}
+.price-heading::before {
+  content: "Cards";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: -7.2rem;
+  font-size: 10rem;
+  color: #eee;
+  line-height: 1;
+  z-index: -1;
+}
+.pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.pricing-header h2 {
+  margin-right: 2rem;
+  font-size: a.6rem;
+  font-weight: 500;
+}
+.switch-plans {
+  width: 15rem;
+  background: var(--main-color);
+  height: 3rem;
+  appearance: none;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+}
+.pricing-header .switch-container {
+  position: relative;
+  display: inline-block;
+  color: var(--second-color);
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing-header .switch-container .monthly {
+  position: absolute;
+  left: 1rem;
+  top: .5rem;
+  pointer-events: none;
+}
+.pricing-header .switch-container .yearly {
+  position: absolute;
+  right: 1rem;
+  top: .5rem;
+  pointer-events: none;
+}
+
+.pricing-header .switch-plans::before {
+  content: "";
+  color: #fff;
+  position: absolute;
+  height: 2.7rem;
+  width: 6.5rem;
+  border-radius: 24px;
+  background: var(--third-color);
+  top: 50%;
+  transform: translateY(-50%);
+  left: .4rem;
+  transition: all 0.5s;
+}
+.pricing-header .switch-plans:checked::before {
+  left: 90px;
+  width: 5.7rem;
+  right: 6px;
+}
+
+
+/* ----------------------- *\ 
+        *** Cards ***
+/* ----------------------- */
+
+/* *** Fiverr Price Table Clone *** */
+
+.price_table-container-3 {
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    margin: 15rem auto 4rem auto;
+    background-color: #f8f8f8;
+}
+.price_table-container-3 h3 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+.price_table-box {
+    border: .1rem solid #dadbdd;
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    max-width: 50rem;
+}
+
+.price_table-box .packages_group input {
+    display: none;
+}
+.price_table-box .packages {
+    display: flex; 
+    border-bottom: .1rem solid #dadbdd;
+}
+.price_table-box .packages .package_tab {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+    border-right: .1rem solid #dadbdd;
+    cursor: pointer;
+    color: #74767e;
+    font-weight: 500;
+    background: #fafafa;
+    flex: 1 1;
+    text-align: center;
+}
+.price_table-box .packages .package_tab.active {
+    border-bottom: .1rem solid #fff; 
+}
+.price_table-box .packages .package_tab:nth-child(1) {
+    padding: 1.5rem 4rem;
+}
+.price_table-box .packages .package_tab:nth-child(3) {
+    border-right: none;
+}
+.packages_contents {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.packages_contents .price_table {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #222;
+    font-weight: 500;
+}
+.packages_contents .price_table span {
+    font-size: 3rem;
+}
+.packages_contents .price_table ion-icon {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+.packages_contents .subscribe_box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.packages_contents .subscribe_box p {
+    font-size: 1.6rem;
+}
+.packages_contents .subscribe_box p a {
+    text-decoration: none;
+    color: #026a5d;
+}
+.packages_contents .subscribe_box ion-icon {
+    font-size: 1.6rem;
+    color: #222;
+    padding-left: 1rem;
+}
+.packages_contents  .asin_products {
+    padding-top: 1rem;
+}
+.packages_contents  .asin_products p {
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 400;
+}
+.delivery_time-box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem 0;
+}
+.delivery_time-box ion-icon {
+    font-size: 3rem;
+    color: #666;
+}
+.delivery_time-box h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #666;
+}
+.content_list ul li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 1rem;
+}
+.content_list ul li p {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+.content_list ul li ion-icon {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #222;
+}
+.content_list  p {
+    color: #74767e;
+}
+.btn_box {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.btn_box button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: all .3s;
+}
+.btn_box button:hover {
+    background: #444;
+}
+.btn_box .button-box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.btn_box button ion-icon {
+    margin-left: 12rem;
+}
+.btn_box p {
+    text-align: center;
+    margin: 1rem 0 1.2rem 0;
+    font-size: 1.6rem;
+}
+.btn_box p a {
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+}
+@media only screen and (max-width: 475px) {
+    .price_table-box .packages .package_tab {
+        font-size: 1.4rem;
+        padding: 1.5rem 2.5rem;
+        border-right: .1rem solid #dadbdd;
+        flex: 1 1;
+    }
+    .packages_contents .price_table span {
+        font-size: 2.4rem;
+    }
+  }
+  

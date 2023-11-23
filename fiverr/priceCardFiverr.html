@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Cards</title>
+    <link rel="stylesheet" href="./assets/css/priceCardFiverr.css">
+</head>
+<body>
+
+
+
+
+    <div class="price_table-container-3">
+        <h3>Fiverr Price Table Clone</h3>
+        <div class="price_table-box">
+            <div class="packages_group">
+                <input id="package_basic" name="package_basic" type="radio">
+                <input id="package_standard" name="package_standard" type="radio">
+                <input id="package_premium" name="package_premium" type="radio">
+                <div class="packages">
+                    <label for="package_basic" class="package_tab basic_tab active">Basic</label>
+                    <label for="package_standard" class="package_tab standard_tab">Standard</label>
+                    <label for="package_premium" class="package_tab premium_tab">Premium</label>
+                </div>
+            </div>
+            <div class="packages_contents">
+                <div class="price_table">
+                    <span id="packages_price">€9.74</span>
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                </div>
+                <div class="subscribe_box">
+                    <p>Save up to 10% with
+                        <a href="">Subscribe to Save</a>
+                    </p>
+                    <ion-icon name="help-circle-outline"></ion-icon>
+                </div>
+                <div class="asin_products">
+                    <p id="asin_text">
+                        1 ASIN Product Listing/Variation
+                        I will create or fix Amazon 1 product Listing (Either parent-child variation or single product)
+                    </p>
+                </div>
+                <div class="delivery_time-box">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <h5 id="delivery_time">1 Day Delivery</h5>
+                </div>
+                <div class="content_list">
+                    <ul>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon>
+                            <p>Data sourcing</p>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon>
+                            <p>Multiple category upload</p>
+                        </li>
+                        <li>
+                            <ion-icon name="checkmark-outline"></ion-icon>
+                            <p>Product catalog update</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn_box">
+                        <button type="submit">Continue<ion-icon name="arrow-forward-outline"></ion-icon></button>
+                        <p><a href="">Compare packages</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</main>
+      
+       
+
+
+  
+
+
+
+
+
+
+
+
+
+<!--mixitup-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>        
+
+<!--IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+
+// Fiverr Price Table
+const basicTab = document.querySelector("#package_basic");
+const standardTab = document.querySelector("#package_standard");
+const premiumTab = document.querySelector("#package_premium");
+const packagePrice = document.querySelector("#packages_price");
+const deliveryTime = document.querySelector("#delivery_time");
+const asinText = document.querySelector("#asin_text");
+
+
+basicTab.addEventListener("click", function() {
+     packagePrice.innerText = "€9.74";
+     asinText.innerText = "1 ASIN Product Listing/Variation I will create or fix Amazon 1 product Listing (Either parent-child variation or single product)";
+     deliveryTime.innerText = "1 Day Delivery"
+})
+standardTab.addEventListener("click", function() {
+     packagePrice.innerText = "€48.68";
+     asinText.innerText = "6 ASINs product Listings/Variation I will create or Fix 6 ASINs (either parent-child variations or simple products)";
+     deliveryTime.innerText = "2 Days Delivery"
+})
+premiumTab.addEventListener("click", function() {
+     packagePrice.innerText = "€146.03";
+     asinText.innerText = "12 ASINs product Listings/Variation I will create or Fix 12 ASINs (either parent-child variations or simple products)";
+     deliveryTime.innerText = "3 Days Delivery"
+})
+</script>
+
+</body>
+</html>
